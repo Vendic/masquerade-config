@@ -1,0 +1,11 @@
+feeds:
+  scconnector_google_feed_cl:
+    pk: version_id
+    provider:
+      delete: true
+
+  amasty_feed_entity:
+    pk: entity_id
+    provider:
+      delete: true
+

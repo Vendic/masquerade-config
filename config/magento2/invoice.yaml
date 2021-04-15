@@ -1,0 +1,34 @@
+invoice:
+  sales_invoice:
+    provider:
+      delete: true
+      where: "`created_at` < now() - interval 30 DAY"
+    columns:
+      customer_note:
+        formatter: sentence
+        optional: true
+
+  sales_invoice_comment:
+    columns:
+      comment:
+        formatter: sentence
+        optional: true
+
+  sales_invoice_grid:
+    provider:
+      delete: true
+      where: "`order_created_at` < now() - interval 30 DAY"
+    columns:
+      customer_email:
+        formatter: email
+        unique: true
+        nullColumnBeforeRun: true
+      customer_name:
+        formatter: name
+      billing_name:
+        formatter: name
+      shipping_address:
+        formatter: address
+      billing_address:
+        formatter: address
+

@@ -1,0 +1,82 @@
+order:
+  sales_order:
+    provider:
+      delete: true
+      where: "`created_at` < now() - interval 30 DAY"
+    columns:
+      customer_email:
+        formatter: email
+        unique: true
+        nullColumnBeforeRun: true
+      customer_firstname:
+        formatter: firstName
+      customer_lastname:
+        formatter: lastName
+      customer_dob:
+        formatter: dateTimeThisCentury
+        optional: true
+      customer_taxvat:
+        formatter: vat
+        optional: true
+      remote_ip:
+        formatter: ipv4
+      customer_note:
+        formatter: sentence
+        optional: true
+
+  sales_order_grid:
+    provider:
+      delete: true
+      where: "`created_at` < now() - interval 30 DAY"
+    columns:
+      customer_email:
+        formatter: email
+        unique: true
+        nullColumnBeforeRun: true
+      customer_name:
+        formatter: name
+      shipping_name:
+        formatter: name
+      billing_name:
+        formatter: name
+      shipping_address:
+        formatter: address
+      billing_address:
+        formatter: address
+
+  sales_order_address:
+    columns:
+      email:
+        formatter: email
+        unique: true
+        nullColumnBeforeRun: true
+      firstname:
+        formatter: firstName
+      lastname:
+        formatter: lastName
+      company:
+        formatter: company
+        optional: true
+      street:
+        formatter: streetAddress
+      city:
+        formatter: city
+      postcode:
+        formatter: postcode
+      telephone:
+        formatter: phoneNumber
+      fax:
+        formatter: phoneNumber
+        optional: true
+      vat_id:
+        formatter: vat
+        optional: true
+
+  sales_order_payment:
+    columns:
+      last_trans_id:
+        formatter: fixed
+        value:
+      additional_information:
+        formatter: fixed
+        value:

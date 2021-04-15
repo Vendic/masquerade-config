@@ -1,0 +1,58 @@
+report:
+  report_event:
+    pk: event_id
+    provider:
+      delete: true
+
+  report_viewed_product_index:
+    pk: index_id
+    provider:
+      delete: true
+
+  report_viewed_product_aggregated_daily:
+    provider:
+      delete: true
+
+  report_viewed_product_aggregated_monthly:
+    provider:
+      delete: true
+
+  report_viewed_product_aggregated_yearly:
+    provider:
+      delete: true
+
+  report_compared_product_index:
+    pk: index_id
+    provider:
+      delete: true
+
+  mageplaza_seodashboard_low_count_report_issue:
+    pk: issue_id
+    provider:
+      delete: true
+
+  mageplaza_seodashboard_noroute_report_issue:
+    pk: issue_id
+    provider:
+      delete: true
+
+  mageplaza_seodashboard_report_issue:
+    pk: issue_id
+    provider:
+      delete: true
+
+  sales_bestsellers_aggregated_daily:
+    pk: id
+    provider:
+      delete: true
+
+  sales_bestsellers_aggregated_monthly:
+    pk: id
+    proivder:
+      delete: true
+
+  sales_bestsellers_aggregated_yearly:
+    pk: id
+    provider:
+      delete: true
+
