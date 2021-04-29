@@ -1,8 +1,7 @@
 creditmemo:
   sales_creditmemo:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 60 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_note:
         formatter: sentence
@@ -18,8 +17,7 @@ creditmemo:
 
   sales_creditmemo_grid:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 60 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_email:
         formatter: email

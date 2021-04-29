@@ -1,8 +1,7 @@
 invoice:
   sales_invoice:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 30 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_note:
         formatter: sentence
@@ -16,8 +15,7 @@ invoice:
 
   sales_invoice_grid:
     provider:
-      delete: true
-      where: "`order_created_at` < now() - interval 30 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_email:
         formatter: email

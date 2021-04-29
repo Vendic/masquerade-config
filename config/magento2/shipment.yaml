@@ -1,8 +1,7 @@
 shipment:
   sales_shipment:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 60 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_note:
         formatter: sentence
@@ -16,8 +15,7 @@ shipment:
 
   sales_shipment_grid:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 60 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_email:
         formatter: email

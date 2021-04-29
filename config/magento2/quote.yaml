@@ -1,8 +1,7 @@
 quote:
   quote:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 60 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_email:
         formatter: email
@@ -24,8 +23,7 @@ quote:
   quote_address:
     pk: address_id
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 60 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       email:
         formatter: email

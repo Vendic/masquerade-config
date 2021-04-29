@@ -1,8 +1,7 @@
 order:
   sales_order:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 30 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_email:
         formatter: email
@@ -26,8 +25,7 @@ order:
 
   sales_order_grid:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 30 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       customer_email:
         formatter: email

@@ -48,7 +48,7 @@ report:
 
   sales_bestsellers_aggregated_monthly:
     pk: id
-    proivder:
+    provider:
       delete: true
 
   sales_bestsellers_aggregated_yearly:

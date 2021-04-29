@@ -1,8 +1,7 @@
 customer:
   customer_entity:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 30 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       email:
         formatter: email
@@ -49,8 +48,7 @@ customer:
 
   customer_grid_flat:
     provider:
-      delete: true
-      where: "`created_at` < now() - interval 30 DAY"
+      delete_where: "`created_at` < now() - interval 30 day"
     columns:
       name:
         formatter: name
