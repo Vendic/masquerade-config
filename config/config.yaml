@@ -1,6 +1,0 @@
-platform: magento2
-database: myhairst_magento
-username: root
-password: root
-host: localhost
-port: 3307
