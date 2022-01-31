@@ -2,4 +2,4 @@ vendic:
   vendic_serversidetracking_transactionqueue:
     pk: entity_id
     provider:
-      delete: true
+      truncate: true
