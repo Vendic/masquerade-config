@@ -1,0 +1,13 @@
+fme:
+  fme_subscribers:
+    provider:
+      delete_where: "`subscribe_time` < now() - interval 30 day"
+    columns:
+      customer_email:
+        formatter: email
+        unique: true
+        nullColumnBeforeRun: true
+      logincustomer_email:
+        formatter: email
+        unique: true
+        nullColumnBeforeRun: true
