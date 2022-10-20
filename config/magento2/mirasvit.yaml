@@ -1,0 +1,15 @@
+mirasvit:
+  mst_search_report_log:
+    pk: log_id
+    provider:
+      delete: true
+
+  mst_seo_audit_url:
+    pk: url_id
+    provider:
+      delete: true
+
+  mst_seo_audit_check_result:
+    pk: check_id
+    provider:
+      delete: true

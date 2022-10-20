@@ -2,4 +2,11 @@ vendic:
   vendic_serversidetracking_transactionqueue:
     pk: entity_id
     provider:
-      truncate: true
+      delete: true
+
+  vendic_picqer_webhook_queue:
+    pk: entity_id
+    provider:
+      delete: true
+
+

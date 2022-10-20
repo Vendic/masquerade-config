@@ -2,4 +2,4 @@ smile:
   elasticsuite_tracker_log_event:
     pk: event_id
     provider:
-      truncate: true
+      delete: true
