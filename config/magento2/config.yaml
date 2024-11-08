@@ -1,0 +1,4 @@
+config:
+  core_config_data:
+    provider:
+      delete_where: "`scope` IN (`store`, `stores`) AND `scope_id` NOT IN (select `store_id` from `store`)"
